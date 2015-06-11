@@ -1,0 +1,44 @@
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+
+th {
+  text-align: left;
+}
+
+.index-note {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4%;
+  text-align: left;
+}
+
+.table-data {
+  display: block-inline;
+  padding: 1%;
+}
+
+h1 {
+  text-align: center;
+}
+
+td {
+  position: relative;
+  width: 50%;
+}
+
+#enter {
+ margin-left: 30%;
+ width: 40%;
+}
+
+#add-note {
+  margin-top: 5%;
+  margin-left: 45%;
+  margin-right: 45%;
+  width: 10%;
+}

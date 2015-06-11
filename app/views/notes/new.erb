@@ -1,0 +1,8 @@
+<% @note.errors.full_messages.each do |error| %>
+  <h3><%= error %></h3>
+<% end %>
+<form method="post" action="/notes">
+  <input type="text" name="front" placeholder="title" value="<%= @note.front %>" />
+  <input type="text" name="back_info"   placeholder="Add some content"   value="<%= @note.back_info %>" />
+  <input type="submit" value="create Note" />
+</form>

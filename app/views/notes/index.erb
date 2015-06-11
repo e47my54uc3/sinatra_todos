@@ -1,0 +1,44 @@
+<h1> Available notes </h1>
+
+<form id="add-note" method="get" action="/notes/new">
+  <input type="submit" value="Create a note">
+</form>
+<!-- <form id="edit-note" method="get" action="/notes/new">
+  <input type="submit" value="Edit a note">
+</form> -->
+<!-- <form id="delete-note" method="get" action="/notes/new">
+  <input type="submit" value="Delete a note">
+</form> -->
+
+
+
+<div class="index-note">
+  <% @notes.each do |note| %>
+  <table>
+    <tr>  
+      <td>Title :</td>
+      <td>Content :</td>
+    </tr>
+    <tr>
+      <td class="table-data">
+        <p> <%= note.front %> </p>
+      </td>
+      <td class="table-data">
+        <p> <%= note.back_info %> </p>
+      </td>
+      <td>  
+        <form action="/notes/<%= note.id %>/edit" method="get"> 
+        <input type="submit" value="Edit!">
+        </form>
+      </td>
+      <td>
+      <form action="/notes/<%= note.id %>" method="post"> 
+        <input type="hidden" name="_method" value="delete">
+        <input type="submit" value="delete!">
+      </form>
+      </td>
+    </tr>
+  </table>
+  <% end %>
+</div>
+
